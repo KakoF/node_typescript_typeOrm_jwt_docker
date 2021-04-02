@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  postgre:
+    container_name: 'postgres_docker'
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root123456
+      POSTGRES_USER: rootUser
+      POSTGRES_DB: dockerBase
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+  app:
+    container_name: app_docker
+    depends_on:
+      - postgre
+    build: .
+    ports:
+      - '3001:3335'
+    command: yarn dev
+    expose:
+      - '3001'
+    #command: bash -c "yarn typeorm migration:run && yarn dev"

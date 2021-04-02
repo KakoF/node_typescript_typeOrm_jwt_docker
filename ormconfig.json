@@ -1,0 +1,17 @@
+{
+   "type": "postgres",
+   "host": "192.168.240.2",
+   "port": 5432,
+   "username": "rootUser",
+   "password": "root123456",
+   "database": "dockerBase",
+   "entities": [
+      "src/app/entities/**/*.ts"
+   ],
+   "migrations": [
+      "src/database/migration/**/*.ts"
+   ],
+   "cli": {
+        "migrationsDir": "src/database/migration"
+    }
+}
