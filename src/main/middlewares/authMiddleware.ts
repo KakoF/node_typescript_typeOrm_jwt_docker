@@ -5,11 +5,11 @@ interface tokenPayload {
   iat: Number
   exp: Number
 }
-export default function authMiddleware(
+export const authMiddleware = (
   req: Request,
   res: Response,
   next: NextFunction
-) {
+) => {
   const { authorization } = req.headers
 
   if (!authorization) return res.sendStatus(401)

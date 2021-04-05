@@ -8,7 +8,7 @@ import {
 import bcrypt from 'bcryptjs'
 
 @Entity('users')
-class User {
+export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -24,5 +24,3 @@ class User {
     this.password = bcrypt.hashSync(this.password, 12)
   }
 }
-
-export default User
