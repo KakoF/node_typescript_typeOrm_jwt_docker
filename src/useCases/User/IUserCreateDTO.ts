@@ -1,4 +1,4 @@
-export interface IUserCreateDTO {
+export class IUserCreateDTO {
   email: string
   password: string
 }

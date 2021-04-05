@@ -10,6 +10,8 @@ export class CreateUserUseCase {
 
   async execute(data: IUserCreateDTO): Promise<User> {
     const { email, password } = data
+    const userExist = await this._usersRepository.findByEmail(email)
+    if (userExist) throw new Error('Usuário já está cadastrado')
     const user = new User(email, password)
     const saveUser = await this._usersRepository.save(user)
     return saveUser
