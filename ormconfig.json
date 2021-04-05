@@ -6,10 +6,10 @@
    "password": "root123456",
    "database": "dockerBase",
    "entities": [
-      "src/entities/**/*.ts"
+      "src/domain/entities/**/*.ts"
    ],
    "migrations": [
-      "src/database/migration/**/*.ts"
+      "src/infra/database/migration/**/*.ts"
    ],
    "cli": {
         "migrationsDir": "src/database/migration"

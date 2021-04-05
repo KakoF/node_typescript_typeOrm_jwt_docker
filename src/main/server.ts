@@ -1,11 +1,11 @@
 const path = require('path')
 require('dotenv').config({
-  path: path.join(__dirname, `../.env${process.argv[2]}`),
+  path: path.join(__dirname, `../../.env${process.argv[2]}`),
 })
 import 'reflect-metadata'
 import express from 'express'
-import routes from './routes'
-import '../database/connect'
+import routes from './config/routes'
+import '../infra/database/connect'
 
 const app = express()
 
