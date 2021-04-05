@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { getRepository } from 'typeorm'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import User from '../entities/User'
+import User from '../../entities/User'
 class AuthController {
   async authenticate(req: Request, res: Response) {
     const repository = getRepository(User)

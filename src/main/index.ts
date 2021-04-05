@@ -5,7 +5,7 @@ require('dotenv').config({
 import 'reflect-metadata'
 import express from 'express'
 import routes from './routes'
-import './database/connect'
+import '../database/connect'
 
 const app = express()
 
