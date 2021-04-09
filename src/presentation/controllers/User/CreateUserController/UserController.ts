@@ -6,9 +6,9 @@ export class UserController {
     this._createUseCase = createUseCase
   }
   async store(req: Request, res: Response): Promise<Response> {
-    const { email, password } = req.body
+    const { name, email, password } = req.body
     try {
-      const user = await this._createUseCase.execute({ email, password })
+      const user = await this._createUseCase.execute({ name, email, password })
       return res.json(user)
     } catch (error) {
       return res.status(400).json({

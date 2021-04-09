@@ -14,6 +14,9 @@ export class User {
   id: string
 
   @Column()
+  name: string
+
+  @Column()
   email: string
 
   @Column()
@@ -24,7 +27,8 @@ export class User {
   hashPassword() {
     this.password = bcrypt.hashSync(this.password, 12)
   }
-  constructor(email: string, password: string, id?: string) {
+  constructor(name: string, email: string, password: string, id?: string) {
+    this.name = name
     this.email = email
     this.password = password
     if (!id) {
