@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
-import { CreateUserUseCase } from '../../../../useCases/User/CreateUserUseCase'
+import { ICreateUserUseCase } from '../../../../useCases/User/CreateUser/ICreateUserUseCase'
 export class UserController {
-  private _createUseCase: CreateUserUseCase
-  constructor(createUseCase: CreateUserUseCase) {
+  private _createUseCase: ICreateUserUseCase
+  constructor(createUseCase: ICreateUserUseCase) {
     this._createUseCase = createUseCase
   }
   async store(req: Request, res: Response): Promise<Response> {

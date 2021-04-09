@@ -7,6 +7,7 @@ const router = Router()
 router.post('/users', (request: Request, response: Response) => {
   return creatUserController.store(request, response)
 })
+router.post('/auth', AuthController.authenticate)
 //creatUserController.store(request))
 /*router.get('/users', authMiddleware, UserController.index)
 router.post('/users', UserController.store)

@@ -1,8 +1,9 @@
-import { IUsersRepository } from '../../data/repositories/IUserRepository'
-import { User } from '../../domain/entities/User'
-import { IUserCreateDTO } from './IUserCreateDTO'
+import { IUsersRepository } from '../../../../data/repositories/IUserRepository'
+import { User } from '../../../../domain/entities/User'
+import { IUserCreateDTO } from '../dto/IUserCreateDTO'
+import { ICreateUserUseCase } from '../ICreateUserUseCase'
 
-export class CreateUserUseCase {
+export class CreateUserUseCase implements ICreateUserUseCase {
   private _usersRepository: IUsersRepository
   constructor(usersRepository: IUsersRepository) {
     this._usersRepository = usersRepository

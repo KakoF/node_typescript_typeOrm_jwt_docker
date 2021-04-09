@@ -1,7 +1,7 @@
 {
    "type": "postgres",
    "host": "localhost",
-   "port": 5432,
+   "port": 5434,
    "username": "rootUser",
    "password": "root123456",
    "database": "dockerBase",
@@ -12,6 +12,6 @@
       "src/infra/database/migration/**/*.ts"
    ],
    "cli": {
-        "migrationsDir": "src/database/migration"
+        "migrationsDir": "src/infra/database/migration"
     }
 }
